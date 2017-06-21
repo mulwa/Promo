@@ -13,6 +13,7 @@ import { AngularFireModule } from 'angularfire2';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireAuth } from 'angularfire2/auth';
 import { MyProvider } from '../providers/my/my';
 export  const firebaseConfig = {
     apiKey: "AIzaSyD5JWb6IBcDJMIai9Y1LiwKKrnpiNSj7ec",
@@ -50,6 +51,7 @@ export  const firebaseConfig = {
     StatusBar,
     SplashScreen,
     AngularFireDatabase,
+     AngularFireAuth,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     MyProvider
   ]
