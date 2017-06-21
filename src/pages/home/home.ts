@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import {MyProvider} from '../../providers/my/my';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
@@ -7,12 +8,15 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
   templateUrl: 'home.html'
 })
 export class HomePage {
-items: FirebaseListObservable<any[]>;
-  constructor(public navCtrl: NavController, private db: AngularFireDatabase) {
-    this.items = db.list('/items');
+   private eventsList :any;
 
-     console.log(this.items);
+  constructor(public navCtrl: NavController , public providerService: MyProvider) {
+    this.providerService.getEventList().subscribe(res=>{
+      console.log(res);
+      this.eventsList = res;
+      console.log(this.eventsList);
+
+    });
+
   }
-
-
 }
