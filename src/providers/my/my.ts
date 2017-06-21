@@ -5,16 +5,12 @@ import {AngularFireDatabase , FirebaseListObservable} from "angularfire2/databas
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase';
 
-/*
-  Generated class for the MyProvider provider.
 
-  See https://angular.io/docs/ts/latest/guide/dependency-injection.html
-  for more info on providers and Angular DI.
-*/
 @Injectable()
 export class MyProvider {
   private events:FirebaseListObservable<any[]>;
   private currentUser: firebase.User;
+  private url:string ="https://jsonplaceholder.typicode.com/users";
 
 
 
@@ -26,6 +22,9 @@ export class MyProvider {
   }
   getEventList(){
     return this.db.list('/Events');
+  }
+  getUsers(){
+    return this.db.list('/Student Account');
   }
 
 
