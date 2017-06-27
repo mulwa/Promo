@@ -15,6 +15,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { MyProvider } from '../providers/my/my';
+import {MoredetailsPage} from '../pages/moredetails/moredetails';
 export  const firebaseConfig = {
     apiKey: "AIzaSyD5JWb6IBcDJMIai9Y1LiwKKrnpiNSj7ec",
     authDomain: "itmonitor-bad15.firebaseapp.com",
@@ -31,7 +32,8 @@ export  const firebaseConfig = {
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    MoredetailsPage
   ],
   imports: [
     BrowserModule,
@@ -45,7 +47,8 @@ export  const firebaseConfig = {
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    MoredetailsPage
   ],
   providers: [
     StatusBar,
