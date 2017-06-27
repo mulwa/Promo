@@ -10,9 +10,9 @@
   <ion-list>
     <ion-list-header>Students</ion-list-header>
     <ion-item *ngFor="let student of studentList">
-        <ion-thumbnail item-start>
+        <ion-avatar item-start>
           <ion-icon name="person"></ion-icon>
-        </ion-thumbnail>
+        </ion-avatar>
         <h2>{{student.name}}</h2>
         <p>{{student.mobile}}</p>
       </ion-item>

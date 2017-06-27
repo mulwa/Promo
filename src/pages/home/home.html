@@ -5,13 +5,15 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Upcoming Events </h3>
-  <ion-card *ngFor="let event of eventsList">
-    <ion-card-header>
-      {{event.eventName}}
-    </ion-card-header>
-    <ion-card-content>
-      {{event.eventDescription}}
-    </ion-card-content>
-  </ion-card>
+  <h4>Upcoming Events </h4>
+  <ion-list>
+    <ion-item *ngFor="let event of eventsList">
+      <!-- <ion-thumbnail item-start>
+        <img src="img/thumbnail-totoro.png">
+      </ion-thumbnail> -->
+      <h2>{{event.eventName}}</h2>
+      <p>{{event.eventDescription}}</p>
+      <button ion-button clear item-end (click)="loadMore(event)">View</button>
+    </ion-item>
+  </ion-list>
 </ion-content>

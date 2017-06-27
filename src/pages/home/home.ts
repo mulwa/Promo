@@ -17,6 +17,8 @@ export class HomePage {
       console.log(this.eventsList);
 
     });
-
+  }
+  loadMore(event){
+    console.log("clicked "+event.eventName);
   }
 }
